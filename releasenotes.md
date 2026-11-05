@@ -115,6 +115,7 @@
 - Added `column`, `row`, `set_column` and `set_row` to `Matrix2x2`, `Matrix3x3` and `Matrix4x4`, and `scale_factors` to `Matrix3x3` and `Matrix4x4`.
 - `math::sign` now supports floats.
 - Rewrite `std::compression::deflate` inflate: table driven decoder, 2-3x faster decompression; truncated input is now rejected and `Inflater.init` works with the default `bit_reader_buf`.
+- Add an optional `level` (1-9) to `std::compression::deflate` `compress`, `compress_stream` and `Deflater.init`; the default level produces the same output as before. Faster deflate encoding, and incompressible data is stored instead of expanded.
 
 ## 0.8.5 Change list
 
